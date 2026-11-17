@@ -1,0 +1,21 @@
+{
+  "name": "janice-inquiry-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "respond.io webhook -> Host App catalogue lookup -> staff note in the inbox",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "migrate": "psql \"$DATABASE_URL\" -f schema.sql",
+    "replay": "node tools/replay.js",
+    "test": "node test/smoke.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
